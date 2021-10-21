@@ -1,0 +1,31 @@
+type Students {
+id: ID!,
+name: String!,
+dept: String!,
+quot: String!,
+colleageId: Int!
+}
+
+type Colleage{
+id : ID!,
+name : String!
+}
+
+type ColleageWithStudent{
+name : String!,
+students : [Students!]
+}
+
+
+type Query{
+getById(id:ID):Students,
+getAll : [Students!],
+findColleageWithStudents(id:ID!) : ColleageWithStudent!,
+getCollegeDetailsById(id:ID!) : Colleage,
+findAll : [Colleage!]
+}
+
+type Mutation {
+createStudent(name: String!, dept: String!, quot: String!,colleageId:Int!):Students,
+createColleage (name:String!) : Colleage!
+}
