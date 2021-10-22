@@ -73,7 +73,7 @@
                  <execution>
                      <id>default</id>
                      <goals>
-                         <goal>install</goal>
+                         <goal>build</goal>
                      </goals>
                  </execution>
              </executions>
